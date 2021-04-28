@@ -1,0 +1,6 @@
+framework module UponBaiduAdapter {
+  umbrella header "UponBaiduAdapter.h"
+
+  export *
+  module * { export * }
+}

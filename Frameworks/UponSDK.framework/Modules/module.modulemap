@@ -1,0 +1,6 @@
+framework module UponSDK {
+  umbrella header "UponSDK.h"
+
+  export *
+  module * { export * }
+}
