@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGSize nativeSize;
 /// 头条信息流图片尺寸比例配置（默认：228_150）
 @property (nonatomic, assign) UponTTImageFeedSize ttImgFeedSize;
+/// 信息流预加载条数（默认1条）
+@property (nonatomic, assign) NSInteger nativeOfCount;
 
 @end
 
