@@ -36,4 +36,4 @@ pod 'UponSDKiOS/UponBaiduAdapter'
 | 腾讯（优量汇） | pod 'UponSDKiOS/UponGDTAdapter'      |
 | 快手           | pod 'UponSDKiOS/UponKuaiShouAdapter' |
 
-变现增长就先U聚合，赶快加入我们吧！https://yungaoad.com/
+变现增长就上U聚合，赶快加入我们吧！https://yungaoad.com/
