@@ -21,11 +21,11 @@ typedef void(^UponAdLoadFinishBlock)(id adapter, int time, NSString * _Nullable 
  广告加载失败回调
  @param adapter                 上游adapter
  @param time                        加载耗时（毫秒）
- @param hasAdPadding     是否有广告填充
+ @param needReload          是否需要重新加载
  @param error                     错误
  @param tag                         事件标签
  */
-typedef void(^UponAdLoadFailBlock)(id adapter, int time, BOOL hasAdPadding, NSError * _Nullable error, NSString * _Nullable tag);
+typedef void(^UponAdLoadFailBlock)(id adapter, int time, BOOL needReload, NSError * _Nullable error, NSString * _Nullable tag);
 /**
  广告通用回调
  @param adapter     上游adapter
@@ -121,11 +121,11 @@ typedef void(^UponAdFailBlock)(id adapter, NSError * _Nullable error, NSString *
  
  @param adapter                 上游adapter
  @param time                        加载广告耗时
- @param hasAdPadding      是否有广告填充
+ @param needReload          是否需要重新加载
  @param error                      错误
  @param tag                          事件标签
  */
-- (void)sendAdLoadFailEventWithAdapter:(id)adapter time:(int)time hasAdPadding:(BOOL)hasAdPadding error:(nullable NSError *)error withTag:(nullable NSString *)tag;
+- (void)sendAdLoadFailEventWithAdapter:(id)adapter time:(int)time needReload:(BOOL)needReload error:(nullable NSError *)error withTag:(nullable NSString *)tag;
 
 /**
  发送广告曝光事件
