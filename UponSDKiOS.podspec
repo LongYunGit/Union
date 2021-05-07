@@ -28,24 +28,30 @@ Pod::Spec.new do |spec|
       ss.ios.deployment_target = '9.0'
       ss.vendored_frameworks = 'Frameworks/UponBaiduAdapter.framework'
       ss.dependency "BaiduMobAdSDK", "4.771"
+      ss.dependency "UponSDKiOS/UponSDK", "#{spec.version}"
   end
   
   spec.subspec 'UponGDTAdapter' do |ss|
       ss.ios.deployment_target = '9.0'
+      ss.user_target_xcconfig =   { 'VALID_ARCHS' => 'armv7 x86_64 arm64' }
+      ss.pod_target_xcconfig =   { 'VALID_ARCHS' => 'armv7 x86_64 arm64' }
       ss.vendored_frameworks = 'Frameworks/UponGDTAdapter.framework'
       ss.dependency "GDTMobSDK", "4.12.61"
+      ss.dependency "UponSDKiOS/UponSDK", "#{spec.version}"
   end
   
   spec.subspec 'UponKuaiShouAdapter' do |ss|
       ss.ios.deployment_target = '9.0'
       ss.vendored_frameworks = 'Frameworks/UponKuaiShouAdapter.framework'
       ss.dependency "KSAdSDK", "3.3.9.1"
+      ss.dependency "UponSDKiOS/UponSDK", "#{spec.version}"
   end
   
   spec.subspec 'UponTouTiaoAdapter' do |ss|
       ss.ios.deployment_target = '9.0'
       ss.vendored_frameworks = 'Frameworks/UponTouTiaoAdapter.framework'
       ss.dependency "Ads-CN", "3.5.1.2"
+      ss.dependency "UponSDKiOS/UponSDK", "#{spec.version}"
   end
   
 
