@@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'UponTouTiaoAdapter' do |ss|
       ss.ios.deployment_target = '9.0'
       ss.vendored_frameworks = 'Frameworks/UponTouTiaoAdapter.framework'
-      ss.dependency "Ads-CN", "3.5.1.2"
+      ss.dependency "Ads-CN", "3.6.1.1"
       ss.dependency "UponSDKiOS/UponSDK", "#{spec.version}"
   end
   
