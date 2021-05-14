@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, class) NSString *channel;
 /// Upon平台的appid
 @property (nonatomic, readonly, class) NSString *appId;
-/// 启动获取定位信息
+/// 允许获取定位信息
 @property (nonatomic, assign, class) BOOL enableLocation;
 /// 预加载配置信息（注：如果不配置，在初始化预加载的时候，某些类型的广告将无法预加载。请在startWithAppId: 调用之前设置）
 @property (nonatomic, strong) UponAdPreloadConfig *preloadConfig;

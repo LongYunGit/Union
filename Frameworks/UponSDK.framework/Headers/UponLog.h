@@ -18,11 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)printLog:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
-/// 获取日志信息，已供可视化展示
-+ (NSArray<NSString *> *)logList;
-/// 清空日志信息
-+ (void)clear;
-
 @end
 
 NS_ASSUME_NONNULL_END
