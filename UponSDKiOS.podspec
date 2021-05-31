@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "UponSDKiOS"
-  spec.version      = "1.0.0"
+  spec.version      = "1.1.0"
   spec.summary      = "云告U聚合SDK"
   spec.description  = <<-DESC
                       云告U聚合SDK，优化广告收益的得力助手。
@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
       ss.ios.deployment_target = '9.0'
       ss.vendored_frameworks = 'Frameworks/{UponSDK,UponYunGaoAdapter}.framework'
       ss.dependency "YGNet", "0.0.3"
-      ss.dependency "YGAdSDK", "0.0.6"
+      ss.dependency "YGAdSDK", "0.0.7"
   end
   
   spec.subspec 'UponBaiduAdapter' do |ss|
