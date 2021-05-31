@@ -19,8 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 
-/// 广告物料是否准备好，可以展示了。YES：可以展示；NO：不能展示
-@property (nonatomic, readonly, getter=isReady) BOOL ready;
+/// 广告缓存是否有效
+@property (nonatomic, readonly, getter=isAdValid) BOOL adValid;
+
+/// 广告请求是否完成
+@property (nonatomic, readonly, getter=isLoadFinished) BOOL loadFinished;
 
 /// 信息流广告视图数组
 @property (nonatomic, readonly) NSArray<UponNativeView *> *adViewList;

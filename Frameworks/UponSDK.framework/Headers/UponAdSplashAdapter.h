@@ -19,20 +19,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 
-/// 广告物料是否准备好，可以展示了。YES：可以展示；NO：不能展示
-@property (nonatomic, readonly, getter=isReady) BOOL ready;
+/// 广告缓存是否有效
+@property (nonatomic, readonly, getter=isAdValid) BOOL adValid;
 
-/// 判断当前广告是否已经展示过
-@property (nonatomic, readonly, getter=isShowed) BOOL showed;
-
-/// 判断当前adapter是否可以被释放了
-@property (nonatomic, readonly) BOOL canRelease;
+/// 广告请求是否完成
+@property (nonatomic, readonly, getter=isLoadFinished) BOOL loadFinished;
 
 /// 广告数据
 @property (nonatomic, readonly) id<UponAD> adInfo;
 
 /// 广告事件对象
 @property (nonatomic, readonly) id<UponAdEvent> event;
+
+@property (nonatomic, readonly, weak) UIViewController *rootViewController;
 
 
 /**

@@ -21,11 +21,10 @@ typedef void(^UponAdLoadFinishBlock)(id adapter, int time, NSString * _Nullable 
  广告加载失败回调
  @param adapter                 上游adapter
  @param time                        加载耗时（毫秒）
- @param needReload          是否需要重新加载
  @param error                     错误
  @param tag                         事件标签
  */
-typedef void(^UponAdLoadFailBlock)(id adapter, int time, BOOL needReload, NSError * _Nullable error, NSString * _Nullable tag);
+typedef void(^UponAdLoadFailBlock)(id adapter, int time, NSError * _Nullable error, NSString * _Nullable tag);
 /**
  广告通用回调
  @param adapter     上游adapter
@@ -85,6 +84,15 @@ typedef void(^UponAdFailBlock)(id adapter, NSError * _Nullable error, NSString *
 /// 订阅广告视频播放结束事件
 - (void)subscribeAdVideoEndEvent:(UponAdGeneralBlock)block withTag:(nullable NSString *)tag;
 
+/// 订阅广告视频播放50%事件
+- (void)subscribeAdVideoHalfEvent:(UponAdGeneralBlock)block withTag:(nullable NSString *)tag;
+
+/// 订阅广告唤醒失败事件
+- (void)subscribeAdDeeplinkFailEvent:(UponAdGeneralBlock)block withTag:(nullable NSString *)tag;
+
+/// 订阅广告唤醒成功事件
+- (void)subscribeAdDeeplinkSuccessEvent:(UponAdGeneralBlock)block withTag:(nullable NSString *)tag;
+
 /// 订阅广告视频播放出错事件
 - (void)subscribeAdVideoFailEvent:(UponAdFailBlock)block withTag:(nullable NSString *)tag;
 
@@ -121,11 +129,10 @@ typedef void(^UponAdFailBlock)(id adapter, NSError * _Nullable error, NSString *
  
  @param adapter                 上游adapter
  @param time                        加载广告耗时
- @param needReload          是否需要重新加载
  @param error                      错误
  @param tag                          事件标签
  */
-- (void)sendAdLoadFailEventWithAdapter:(id)adapter time:(int)time needReload:(BOOL)needReload error:(nullable NSError *)error withTag:(nullable NSString *)tag;
+- (void)sendAdLoadFailEventWithAdapter:(id)adapter time:(int)time error:(nullable NSError *)error withTag:(nullable NSString *)tag;
 
 /**
  发送广告曝光事件
@@ -192,6 +199,30 @@ typedef void(^UponAdFailBlock)(id adapter, NSError * _Nullable error, NSString *
 - (void)sendAdVideoEndEventWithAdapter:(id)adapter withTag:(nullable NSString *)tag;
 
 /**
+ 发送广告视频播放50%事件
+ 
+ @param adapter     上游adapter
+ @param tag              事件标签
+ */
+- (void)sendAdVideoHaflEventWithAdapter:(id)adapter withTag:(nullable NSString *)tag;
+
+/**
+ 发送广告唤醒失败事件
+ 
+ @param adapter     上游adapter
+ @param tag              事件标签
+ */
+- (void)sendAdDeeplinkFailEventWithAdapter:(id)adapter withTag:(nullable NSString *)tag;
+
+/**
+ 发送广告唤醒成功事件
+ 
+ @param adapter     上游adapter
+ @param tag              事件标签
+ */
+- (void)sendAdDeeplinkSuccessEventWithAdapter:(id)adapter withTag:(nullable NSString *)tag;
+
+/**
  发送广告视频播放出错事件
  
  @param adapter     上游adapter
@@ -230,13 +261,6 @@ typedef void(^UponAdFailBlock)(id adapter, NSError * _Nullable error, NSString *
  @param tag              事件标签
  */
 - (void)sendAdAutoRefreshSuccessEventWithAdapter:(id)adapter withTag:(nullable NSString *)tag;
-
-/**
- 获取adapter的广告信息对象
- 
- @param adapter 广告adapter
- */
-+ (id<UponAD>)getAdInfoForAdapter:(id)adapter;
 
 /// 设置广告请求任务超时（设置超时后，delegate将不会回调）
 - (void)setTimeout;

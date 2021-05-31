@@ -71,15 +71,4 @@ typedef NS_ENUM(NSInteger, UponAdLayeredType) {
 FOUNDATION_EXTERN NSString * UponAdLayeredTypeName(UponAdLayeredType type);
 
 
-
-/// 请求上报中接口参数中的错误码类型
-typedef int UponReportErrorCode;
-/// 请求正常
-extern const UponReportErrorCode kErrorCodeSuccess;
-/// 无广告填充
-extern const UponReportErrorCode kErrorCodeNoAds;
-/// 其他错误
-extern const UponReportErrorCode kErrorCodeOther;
-
-
 #endif /* _UponConstant_ */

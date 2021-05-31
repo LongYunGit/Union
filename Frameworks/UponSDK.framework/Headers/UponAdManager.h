@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 允许获取定位信息
 @property (nonatomic, assign, class) BOOL enableLocation;
 /// 预加载配置信息（注：如果不配置，在初始化预加载的时候，某些类型的广告将无法预加载。请在startWithAppId: 调用之前设置）
-@property (nonatomic, strong) UponAdPreloadConfig *preloadConfig;
+@property (nonatomic, strong, class) UponAdPreloadConfig *preloadConfig;
 
 
 /// 集成SDK检查（检查缺少哪些framwork未导入）
