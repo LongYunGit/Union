@@ -1,5 +1,5 @@
-# Upon SDK
-云告U聚合平台SDK
+# U聚合 SDK
+U聚合平台SDK
 
 版本更新说明：
 
@@ -18,11 +18,11 @@ cocoapods集成，在podfile文件中添加:
 
 ```ruby
 # 核心库，必须添加
-pod 'UponSDKiOS'
+pod 'UnionSDKiOS'
 # 各平台的adapter
-pod 'UponSDKiOS/Upon(平台名)Adapter'
+pod 'UnionSDKiOS/Union(平台名)Adapter'
 # 例如：百度，您需要添加如下：
-pod 'UponSDKiOS/UponBaiduAdapter'
+pod 'UnionSDKiOS/UnionBaiduAdapter'
 ```
 
 手动集成：参考[技术文档](http://doc.dev.uponad.com/#/UPON/iOS/ios_sdk_config_access)
@@ -31,9 +31,9 @@ pod 'UponSDKiOS/UponBaiduAdapter'
 
 | 平台           | pod                                  |
 | -------------- | ------------------------------------ |
-| 百度           | pod 'UponSDKiOS/UponBaiduAdapter'    |
-| 头条（穿山甲） | pod 'UponSDKiOS/UponTouTiaoAdapter'  |
-| 腾讯（优量汇） | pod 'UponSDKiOS/UponGDTAdapter'      |
-| 快手           | pod 'UponSDKiOS/UponKuaiShouAdapter' |
+| 百度           | pod 'UnionSDKiOS/UnionBaiduAdapter'    |
+| 头条（穿山甲） | pod 'UnionSDKiOS/UnionTouTiaoAdapter'  |
+| 腾讯（优量汇） | pod 'UnionSDKiOS/UnionGDTAdapter'      |
+| 快手           | pod 'UnionSDKiOS/UnionKuaiShouAdapter' |
 
 变现增长就上U聚合，赶快加入我们吧！https://yungaoad.com/
