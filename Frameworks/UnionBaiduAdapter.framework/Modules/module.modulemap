@@ -1,0 +1,6 @@
+framework module UnionBaiduAdapter {
+  umbrella header "UnionBaiduAdapter.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module UnionTouTiaoAdapter {
+  umbrella header "UnionTouTiaoAdapter.h"
+
+  export *
+  module * { export * }
+}

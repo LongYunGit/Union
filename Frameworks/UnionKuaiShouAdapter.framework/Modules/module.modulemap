@@ -1,0 +1,6 @@
+framework module UnionKuaiShouAdapter {
+  umbrella header "UnionKuaiShouAdapter.h"
+
+  export *
+  module * { export * }
+}

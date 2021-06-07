@@ -1,0 +1,6 @@
+framework module UnionYunGaoAdapter {
+  umbrella header "UnionYunGaoAdapter.h"
+
+  export *
+  module * { export * }
+}

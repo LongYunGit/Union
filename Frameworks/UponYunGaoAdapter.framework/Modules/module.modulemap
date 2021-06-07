@@ -1,6 +1,0 @@
-framework module UponYunGaoAdapter {
-  umbrella header "UponYunGaoAdapter.h"
-
-  export *
-  module * { export * }
-}

@@ -1,0 +1,6 @@
+framework module UnionSDK {
+  umbrella header "UnionSDK.h"
+
+  export *
+  module * { export * }
+}

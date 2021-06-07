@@ -1,6 +1,0 @@
-framework module UponTouTiaoAdapter {
-  umbrella header "UponTouTiaoAdapter.h"
-
-  export *
-  module * { export * }
-}

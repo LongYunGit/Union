@@ -1,0 +1,6 @@
+framework module UnionGDTAdapter {
+  umbrella header "UnionGDTAdapter.h"
+
+  export *
+  module * { export * }
+}

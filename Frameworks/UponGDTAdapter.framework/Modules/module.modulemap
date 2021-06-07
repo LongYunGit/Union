@@ -1,6 +1,0 @@
-framework module UponGDTAdapter {
-  umbrella header "UponGDTAdapter.h"
-
-  export *
-  module * { export * }
-}
