@@ -25,7 +25,7 @@ pod 'UnionSDKiOS/Union(平台名)Adapter'
 pod 'UnionSDKiOS/UnionBaiduAdapter'
 ```
 
-手动集成：参考[技术文档](http://doc.dev.uponad.com/#/UPON/iOS/ios_sdk_config_access)
+手动集成：参考[技术文档](http://doc.uponad.com/#/)
 
 下面是所有Adapter的pod列表：
 
